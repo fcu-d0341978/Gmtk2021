@@ -22,3 +22,8 @@ func _physics_process(delta):
 	
 	motion = motion.normalized()
 	motion = move_and_slide(motion * moveSpeed)
+
+
+func _on_Area2D_body_entered(body):
+	if "PlayerMirror" in body.name:
+		print("Touched")
