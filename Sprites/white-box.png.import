@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+path="res://.import/white-box.png-38b34a6b72678b582a7a729de4394f00.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icon.png"
-dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
+source_file="res://Sprites/white-box.png"
+dest_files=[ "res://.import/white-box.png-38b34a6b72678b582a7a729de4394f00.stex" ]
 
 [params]
 
