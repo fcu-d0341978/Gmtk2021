@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 var moveSpeed = 500
+export(String, FILE) var nextScene = ""
 
 func _ready():
 	pass # Replace with function body.
@@ -26,5 +27,7 @@ func _physics_process(delta):
 
 func _on_Area2D_body_entered(body):
 	if "PlayerMirror" in body.name:
-		get_tree().change_scene("res://Scene/World2.tscn")
-		print("Touched")
+		if nextScene == "":
+			print("Enter next scene path")
+		else:
+			get_tree().change_scene(nextScene)
