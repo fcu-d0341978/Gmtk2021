@@ -13,5 +13,4 @@ func _change_state():
 	if !isOpen:
 		isOpen = !isOpen
 		get_parent().remove_child(self)
-		print("is open")
 	

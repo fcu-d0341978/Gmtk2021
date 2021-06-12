@@ -3,8 +3,9 @@ extends KinematicBody2D
 var moveSpeed = 500
 export(String, FILE) var nextScene = ""
 
-func _ready():
-	pass # Replace with function body.
+func _process(delta):
+	if Input.is_action_pressed("restart"):
+		get_tree().reload_current_scene()
 
 func _physics_process(delta):
 	var motion = Vector2()
@@ -31,3 +32,4 @@ func _on_Area2D_body_entered(body):
 			print("Enter next scene path")
 		else:
 			get_tree().change_scene(nextScene)
+

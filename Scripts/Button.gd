@@ -8,7 +8,6 @@ func _on_Area2D_body_entered(body):
 	if "Player" or "PlayerMirror" in body.name:
 		$Area2D/Sprite.modulate = Color(0.8, 0.8, 0.8)
 		emit_signal("doorOpen")
-		print("touched")
 
 
 func _on_Area2D_body_exited(body):

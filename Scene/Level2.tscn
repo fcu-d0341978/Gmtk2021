@@ -7,7 +7,7 @@
 [ext_resource path="res://Prefabs/Door.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/Button.tscn" type="PackedScene" id=6]
 
-[node name="Level1" type="Node2D"]
+[node name="Level2" type="Node2D"]
 
 [node name="background" type="Sprite" parent="."]
 modulate = Color( 0, 0.466667, 0.713726, 1 )
@@ -17,10 +17,11 @@ texture = ExtResource( 4 )
 
 [node name="Button" parent="." instance=ExtResource( 6 )]
 position = Vector2( 816, 208 )
+linkCode = 1
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 192, 192 )
-nextScene = "res://Scene/Level2.tscn"
+nextScene = "res://Scene/Level3.tscn"
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
@@ -36,3 +37,4 @@ position = Vector2( 848, 432 )
 [node name="Door" parent="Door" instance=ExtResource( 5 )]
 position = Vector2( 752, 464 )
 rotation = 1.5708
+linkCode = 1
