@@ -26,4 +26,5 @@ func _physics_process(delta):
 
 func _on_Area2D_body_entered(body):
 	if "PlayerMirror" in body.name:
+		get_tree().change_scene("res://Scene/World2.tscn")
 		print("Touched")
