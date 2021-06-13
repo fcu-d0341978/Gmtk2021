@@ -3,7 +3,7 @@ extends CanvasLayer
 func _ready():
 	SignalManager.connect("doTransition", self, "transition")
 	SignalManager.connect("doDeathTransition", self, "deathTransition")
-	
+
 func transition():
 	$AnimationPlayer.play("fadeToBlack")
 

@@ -17,7 +17,7 @@ texture = ExtResource( 4 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 192, 192 )
-nextScene = "res://Scene/Level9.tscn"
+nextScene = "res://Scene/Level2.tscn"
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
