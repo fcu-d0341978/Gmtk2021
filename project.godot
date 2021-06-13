@@ -19,6 +19,11 @@ config/name="Gmtk2021"
 run/main_scene="res://Scene/Level1.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+TransitionScreen="*res://Prefabs/TransitionScreen.tscn"
+SignalManager="*res://Scripts/SignalManager.gd"
+
 [display]
 
 window/stretch/aspect="keep"

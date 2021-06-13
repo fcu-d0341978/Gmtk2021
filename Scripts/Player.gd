@@ -7,6 +7,9 @@ func _process(delta):
 	if Input.is_action_pressed("restart"):
 		get_tree().reload_current_scene()
 
+func _ready():
+	SignalManager.connect("transitioned", self, "change_scene")
+
 func _physics_process(delta):
 	var motion = Vector2()
 	
@@ -31,5 +34,10 @@ func _on_Area2D_body_entered(body):
 		if nextScene == "":
 			print("Enter next scene path")
 		else:
-			get_tree().change_scene(nextScene)
+			SignalManager.emit_signal("doTransition")
+			print("signal emmited")
 
+
+
+func change_scene():
+	get_tree().change_scene(nextScene)
