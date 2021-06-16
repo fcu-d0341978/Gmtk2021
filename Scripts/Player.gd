@@ -4,6 +4,7 @@ var moveSpeed = 350
 export(String, FILE) var nextScene = ""
 onready var particlePosition = $ParticlePosition
 var particleScene = preload("res://Prefabs/Particles.tscn")
+onready var joystick = get_parent().get_node("Joystick/TouchScreenButton")
 
 func _process(delta):
 	if Input.is_action_pressed("restart"):
@@ -22,21 +23,22 @@ func reloadScene():
 
 func _physics_process(delta):
 	var motion = Vector2()
+#
+#	if Input.is_action_pressed("up"):
+#		motion.y -= 1
+#
+#	if Input.is_action_pressed("down"):
+#		motion.y += 1
+#
+#	if Input.is_action_pressed("right"):
+#		motion.x += 1
+#
+#	if Input.is_action_pressed("left"):
+#		motion.x -= 1
+#
+#	motion = motion.normalized()
+	motion = move_and_slide(joystick.get_value() * moveSpeed)
 	
-	if Input.is_action_pressed("up"):
-		motion.y -= 1
-	
-	if Input.is_action_pressed("down"):
-		motion.y += 1
-		
-	if Input.is_action_pressed("right"):
-		motion.x += 1
-		
-	if Input.is_action_pressed("left"):
-		motion.x -= 1
-	
-	motion = motion.normalized()
-	motion = move_and_slide(motion * moveSpeed)
 
 
 func _on_Area2D_body_entered(body):

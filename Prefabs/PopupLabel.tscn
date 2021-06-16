@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sound/dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scripts/TutorialLabel.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "fadeIn"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "fadeOut"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="Label" type="Label"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 356.99
+margin_top = 34.5343
+margin_right = 633.99
+margin_bottom = 93.5343
+custom_fonts/font = ExtResource( 1 )
+text = "WASD or Arrow key to move"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ApearTimer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="DisappearTimer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/fadeIn = SubResource( 1 )
+anims/fadeOut = SubResource( 2 )
+[connection signal="timeout" from="ApearTimer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="DisappearTimer" to="." method="_on_Timer2_timeout"]
