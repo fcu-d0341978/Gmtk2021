@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+onready var audioPlayer = $AudioStreamPlayer
+
 func _ready():
 	SignalManager.connect("doTransition", self, "transition")
 	SignalManager.connect("doDeathTransition", self, "deathTransition")
@@ -18,3 +20,7 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "fadeToRed":
 		SignalManager.emit_signal("DeathTransitioned")
 		$AnimationPlayer.play("fadeToNormalRed")
+
+
+func _on_AudioStreamPlayer_finished():
+	audioPlayer.play()

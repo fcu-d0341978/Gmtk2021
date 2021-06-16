@@ -6,6 +6,7 @@ onready var actionables_container: Node2D = get_parent().get_node("Door")
 
 func _on_Area2D_body_entered(body):
 	if "Player" or "PlayerMirror" in body.name:
+		$AudioStreamPlayer.play()
 		$Area2D/Sprite.modulate = Color(0.8, 0.8, 0.8)
 		emit_signal("doorOpen")
 

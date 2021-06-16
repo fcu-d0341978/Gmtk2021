@@ -44,6 +44,8 @@ func _on_Area2D_body_entered(body):
 		if nextScene == "":
 			print("Enter next scene path")
 		else:
+			if $AudioStreamPlayer != null:
+				$AudioStreamPlayer.play()
 			var particle = particleScene.instance()
 			add_child(particle)
 			particle.set_position(particlePosition.get_position())

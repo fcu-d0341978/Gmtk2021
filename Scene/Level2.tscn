@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Tiles/Wall.tres" type="TileSet" id=1]
 [ext_resource path="res://Prefabs/PlayerMirror.tscn" type="PackedScene" id=2]
@@ -6,6 +6,38 @@
 [ext_resource path="res://Sprites/white.png" type="Texture" id=4]
 [ext_resource path="res://Prefabs/Door.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/Button.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scripts/TutorialLabel.gd" type="Script" id=7]
+[ext_resource path="res://Sound/dynamicfont.tres" type="DynamicFont" id=8]
+
+[sub_resource type="Animation" id=1]
+resource_name = "fadeIn"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "fadeOut"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
 
 [node name="Level2" type="Node2D"]
 
@@ -38,3 +70,33 @@ position = Vector2( 848, 432 )
 position = Vector2( 752, 464 )
 rotation = 1.5708
 linkCode = 1
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 604.292
+margin_top = 117.422
+margin_right = 1031.29
+margin_bottom = 176.422
+custom_fonts/font = ExtResource( 8 )
+text = "Touch the baby blue block 
+to unlock the door"
+align = 1
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="Label"]
+one_shot = true
+autostart = true
+
+[node name="Timer2" type="Timer" parent="Label"]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Label"]
+anims/fadeIn = SubResource( 1 )
+anims/fadeOut = SubResource( 2 )
+[connection signal="timeout" from="Label/Timer" to="Label" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Label/Timer2" to="Label" method="_on_Timer2_timeout"]
