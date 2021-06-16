@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sprites/BasicTheme.tres" type="Theme" id=1]
+[ext_resource path="res://Sound/dynamicfont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Scripts/EndScene.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/white.png" type="Texture" id=4]
+
+
+[node name="Credit" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="background" type="Sprite" parent="."]
+modulate = Color( 0, 0.466667, 0.713726, 1 )
+position = Vector2( 512, 320 )
+scale = Vector2( 40, 30 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 344.0
+margin_top = 112.0
+margin_right = 686.0
+margin_bottom = 419.0
+custom_fonts/font = ExtResource( 2 )
+text = "Thanks for playing Dream Together!!
+
+Art, Programming and Level Design
+all done by Chowdog
+
+Music by Rand Aldo
+
+
+
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+margin_left = 440.0
+margin_top = 440.0
+margin_right = 588.0
+margin_bottom = 488.0
+theme = ExtResource( 1 )
+text = "Back to Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_Button_pressed"]

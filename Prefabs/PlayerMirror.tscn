@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Player.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/pixil-frame-0.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/white.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/light.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16, 16 )
@@ -16,9 +17,22 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0, 0.705882, 0.847059, 1 )
 texture = ExtResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 2 )
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 3 )
+texture_scale = 1.5
+color = Color( 0.172549, 0.490196, 0.627451, 1 )
+energy = 0.8
+shadow_enabled = true
+
+[node name="ParticlePosition" type="Position2D" parent="."]
+__meta__ = {
+"_editor_description_": ""
+}
