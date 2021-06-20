@@ -11,7 +11,7 @@ var ongoing_drag = -1
 
 var return_accel = 20
 
-var threshold = 10
+var threshold = 5
 
 func _process(delta):
 	if ongoing_drag == -1:
