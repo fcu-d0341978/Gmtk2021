@@ -23,9 +23,13 @@ config/icon="res://icon.png"
 
 SignalManager="*res://Scripts/SignalManager.gd"
 TransitionScreen="*res://Prefabs/TransitionScreen.tscn"
+Joystick="*res://Prefabs/Joystick.tscn"
 
 [display]
 
+window/size/width=600
+window/size/height=1024
+window/handheld/orientation="portrait"
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
 

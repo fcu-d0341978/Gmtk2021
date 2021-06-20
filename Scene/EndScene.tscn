@@ -1,9 +1,10 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Sprites/BasicTheme.tres" type="Theme" id=1]
-[ext_resource path="res://Sound/dynamicfont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Fonts/dynamicfont.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Scripts/EndScene.gd" type="Script" id=3]
 [ext_resource path="res://Sprites/white.png" type="Texture" id=4]
+
 
 
 [node name="Credit" type="Node2D"]

@@ -7,7 +7,8 @@
 [ext_resource path="res://Prefabs/Door.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/Button.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scripts/TutorialLabel.gd" type="Script" id=7]
-[ext_resource path="res://Sound/dynamicfont.tres" type="DynamicFont" id=8]
+[ext_resource path="res://Fonts/dynamicfont.tres" type="DynamicFont" id=8]
+
 
 [sub_resource type="Animation" id=1]
 resource_name = "fadeIn"

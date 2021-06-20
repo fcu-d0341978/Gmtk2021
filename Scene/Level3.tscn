@@ -5,8 +5,9 @@
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Sprites/white.png" type="Texture" id=4]
 [ext_resource path="res://Prefabs/Spike.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Sound/dynamicfont.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Fonts/dynamicfont.tres" type="DynamicFont" id=6]
 [ext_resource path="res://Scripts/TutorialLabel.gd" type="Script" id=7]
+
 
 [sub_resource type="Animation" id=1]
 resource_name = "fadeIn"
