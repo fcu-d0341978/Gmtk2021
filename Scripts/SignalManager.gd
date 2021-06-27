@@ -7,3 +7,5 @@ signal restartScene
 signal doDeathTransition
 signal DeathTransitioned
 
+var levels = []
+var unlockedLevels = 1

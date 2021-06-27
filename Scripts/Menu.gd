@@ -8,4 +8,4 @@ func _on_Button_pressed():
 	SignalManager.emit_signal("doTransition")
 
 func change_scene():
-	get_tree().change_scene("res://Scene/Level1.tscn")
+	get_tree().change_scene("res://Scene/LevelSelection.tscn")
