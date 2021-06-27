@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Tiles/Wall.tres" type="TileSet" id=1]
 [ext_resource path="res://Prefabs/PlayerMirror.tscn" type="PackedScene" id=2]
@@ -7,8 +7,8 @@
 [ext_resource path="res://Prefabs/Door.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/Button.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scripts/TutorialLabel.gd" type="Script" id=7]
-[ext_resource path="res://Fonts/dynamicfont.tres" type="DynamicFont" id=8]
-
+[ext_resource path="res://Fonts/josefinSans20.tres" type="DynamicFont" id=8]
+[ext_resource path="res://Prefabs/SettingsButton.tscn" type="PackedScene" id=9]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fadeIn"
@@ -99,5 +99,11 @@ autostart = true
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Label"]
 anims/fadeIn = SubResource( 1 )
 anims/fadeOut = SubResource( 2 )
+
+[node name="SettingsButton" parent="." instance=ExtResource( 9 )]
+margin_left = 976.0
+margin_top = 24.0
+margin_right = 1000.0
+margin_bottom = 48.0
 [connection signal="timeout" from="Label/Timer" to="Label" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Label/Timer2" to="Label" method="_on_Timer2_timeout"]

@@ -6,9 +6,8 @@
 [ext_resource path="res://Tiles/Wall.tres" type="TileSet" id=4]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/PlayerMirror.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Fonts/dynamicfont.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Fonts/josefinSans20.tres" type="DynamicFont" id=7]
 [ext_resource path="res://Scripts/TutorialLabel.gd" type="Script" id=8]
-
 
 [sub_resource type="Animation" id=1]
 resource_name = "fadeIn"

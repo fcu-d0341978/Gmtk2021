@@ -4,7 +4,6 @@ var moveSpeed = 350
 export(String, FILE) var nextScene = ""
 onready var particlePosition = $ParticlePosition
 var particleScene = preload("res://Prefabs/Particles.tscn")
-onready var joystick = get_parent().get_node("Joystick/TouchScreenButton")
 
 func _process(delta):
 	if Input.is_action_pressed("restart"):
