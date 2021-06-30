@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/TransitionScreen.gd" type="Script" id=1]
 [ext_resource path="res://Sound/MusicBG.wav" type="AudioStream" id=2]
@@ -20,7 +20,22 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=2]
-resource_name = "fadeToNormal"
+resource_name = "fadeToBlue"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0.00784314, 0.243137, 0.541176, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:color")
@@ -35,8 +50,23 @@ tracks/0/keys = {
 "values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "fadeToNormalRed"
+[sub_resource type="Animation" id=4]
+resource_name = "fadeToNormalBlue"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.00784314, 0.243137, 0.541176, 1 ), Color( 0.00784314, 0.243137, 0.541176, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:color")
@@ -51,8 +81,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 0.380392, 0.427451, 1 ), Color( 1, 0, 0.431373, 0 ) ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "fadeToRed"
+[sub_resource type="Animation" id=6]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:color")
@@ -74,16 +103,18 @@ script = ExtResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-color = Color( 1, 0.380392, 0.427451, 0 )
+color = Color( 0.00784314, 0.243137, 0.541176, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/fadeToBlack = SubResource( 1 )
-anims/fadeToNormal = SubResource( 2 )
-anims/fadeToNormalRed = SubResource( 3 )
-anims/fadeToRed = SubResource( 4 )
+anims/fadeToBlue = SubResource( 2 )
+anims/fadeToNormal = SubResource( 3 )
+anims/fadeToNormalBlue = SubResource( 4 )
+anims/fadeToNormalRed = SubResource( 5 )
+anims/fadeToRed = SubResource( 6 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
