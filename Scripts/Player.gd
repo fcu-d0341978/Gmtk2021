@@ -51,7 +51,8 @@ func _on_Area2D_body_entered(body):
 			add_child(particle)
 			particle.set_position(particlePosition.get_position())
 			SignalManager.emit_signal("doTransition")
-			SignalManager.unlockedLevels += 1
+			if SignalManager.unlockedLevels == str2var(get_parent().name):
+				SignalManager.unlockedLevels += 1
 
 func change_scene():
 	get_tree().change_scene(nextScene)

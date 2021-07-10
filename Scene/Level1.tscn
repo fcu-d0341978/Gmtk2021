@@ -7,7 +7,7 @@
 [ext_resource path="res://Prefabs/TouchControls.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/SettingsButton.tscn" type="PackedScene" id=6]
 
-[node name="Level1" type="Node2D"]
+[node name="1" type="Node2D"]
 
 [node name="background" type="Sprite" parent="."]
 modulate = Color( 0, 0.466667, 0.713726, 1 )
@@ -36,7 +36,7 @@ position = Vector2( 192, 416 )
 position = Vector2( 96, 520 )
 
 [node name="SettingsButton" parent="." instance=ExtResource( 6 )]
-margin_left = 968.0
+margin_left = 960.0
 margin_top = 32.0
 margin_right = 992.0
-margin_bottom = 56.0
+margin_bottom = 64.0

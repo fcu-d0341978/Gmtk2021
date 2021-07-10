@@ -1,7 +1,6 @@
 extends Node2D
 
 func _on_TouchScreenButtonUp_pressed():
-	print("Pressed")
 	Input.action_press("up")
 
 func _on_TouchScreenButtonDown_pressed():

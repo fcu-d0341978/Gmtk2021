@@ -23,85 +23,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 32.0
-margin_top = 128.0
-margin_right = -32.0
-margin_bottom = -32.0
-mouse_filter = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
-margin_right = 960.0
-margin_bottom = 440.0
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_constants/vseparation = 30
-custom_constants/hseparation = 30
-columns = 8
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="1" parent="ScrollContainer/GridContainer" instance=ExtResource( 1 )]
-margin_right = 93.0
-
-[node name="2" parent="ScrollContainer/GridContainer" instance=ExtResource( 1 )]
-margin_left = 123.0
-margin_right = 216.0
-
-[node name="3" parent="ScrollContainer/GridContainer" instance=ExtResource( 1 )]
-margin_left = 246.0
-margin_right = 339.0
-
-[node name="4" parent="ScrollContainer/GridContainer" instance=ExtResource( 1 )]
-margin_left = 369.0
-margin_right = 462.0
-
-[node name="5" parent="ScrollContainer/GridContainer" instance=ExtResource( 1 )]
-margin_left = 492.0
-margin_right = 585.0
-
-[node name="6" parent="ScrollContainer/GridContainer" instance=ExtResource( 1 )]
-margin_left = 615.0
-margin_right = 708.0
-
-[node name="7" parent="ScrollContainer/GridContainer" instance=ExtResource( 1 )]
-margin_left = 738.0
-margin_right = 831.0
-
-[node name="8" parent="ScrollContainer/GridContainer" instance=ExtResource( 1 )]
-margin_left = 861.0
-margin_right = 954.0
-
-[node name="9" parent="ScrollContainer/GridContainer" instance=ExtResource( 1 )]
-margin_top = 114.0
-margin_right = 93.0
-margin_bottom = 198.0
-
-[node name="10" parent="ScrollContainer/GridContainer" instance=ExtResource( 1 )]
-margin_left = 123.0
-margin_top = 114.0
-margin_right = 216.0
-margin_bottom = 198.0
-
-[node name="11" parent="ScrollContainer/GridContainer" instance=ExtResource( 1 )]
-margin_left = 246.0
-margin_top = 114.0
-margin_right = 339.0
-margin_bottom = 198.0
-
-[node name="12" parent="ScrollContainer/GridContainer" instance=ExtResource( 1 )]
-margin_left = 369.0
-margin_top = 114.0
-margin_right = 462.0
-margin_bottom = 198.0
-
 [node name="Label" type="Label" parent="."]
 margin_left = 416.0
 margin_top = 32.0
@@ -112,6 +33,32 @@ text = "Levels"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="1" parent="Buttons" instance=ExtResource( 1 )]
+margin_left = 64.0
+margin_top = 192.0
+margin_right = 148.0
+margin_bottom = 276.0
+
+[node name="2" parent="Buttons" instance=ExtResource( 1 )]
+margin_left = 192.0
+margin_top = 192.0
+margin_right = 276.0
+margin_bottom = 276.0
+
+[node name="3" parent="Buttons" instance=ExtResource( 1 )]
+margin_left = 320.0
+margin_top = 192.0
+margin_right = 404.0
+margin_bottom = 276.0
+
+[node name="4" parent="Buttons" instance=ExtResource( 1 )]
+margin_left = 448.0
+margin_top = 192.0
+margin_right = 532.0
+margin_bottom = 276.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
