@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var moveSpeed = 350
-export(String, FILE) var nextScene = ""
+var nextScene = ""
 onready var particlePosition = $ParticlePosition
 var particleScene = preload("res://Prefabs/Particles.tscn")
 
@@ -10,6 +10,7 @@ func _process(delta):
 		restartScene()
 
 func _ready():
+	nextScene = "res://Scene/Level" + String(int(get_parent().name) + 1) + ".tscn"
 	SignalManager.connect("transitioned", self, "change_scene")
 	SignalManager.connect("DeathTransitioned", self, "reloadScene")
 

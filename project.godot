@@ -24,6 +24,7 @@ config/icon="res://icon.png"
 SignalManager="*res://Scripts/SignalManager.gd"
 TransitionScreen="*res://Prefabs/TransitionScreen.tscn"
 SettingsPanel="*res://Prefabs/SettingsPanel.tscn"
+SaveState="*res://Scripts/SaveState.gd"
 
 [display]
 
