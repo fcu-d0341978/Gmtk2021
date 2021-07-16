@@ -8,4 +8,9 @@ func _on_Button_pressed():
 	$CanvasLayer/Button/AudioStreamPlayer.play()
 
 func change_scene():
-	get_tree().change_scene("res://Scene/LevelSelection.tscn")
+	var level = SaveState.loadGame()
+	
+	if level == 0:
+		get_tree().change_scene("res://Scene/Level1.tscn")
+	else:
+		get_tree().change_scene("res://Scene/Level" + String(level) + ".tscn")

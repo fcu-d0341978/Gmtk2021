@@ -54,6 +54,7 @@ func _on_Area2D_body_entered(body):
 			SignalManager.emit_signal("doTransition")
 			if SignalManager.unlockedLevels == str2var(get_parent().name):
 				SignalManager.unlockedLevels += 1
+			SaveState.saveGame(int(get_parent().name) + 1)
 
 func change_scene():
 	get_tree().change_scene(nextScene)
