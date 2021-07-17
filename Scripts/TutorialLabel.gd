@@ -2,6 +2,9 @@ extends Label
 
 onready var animation = $AnimationPlayer
 
+func _ready():
+	modulate.a = 0
+
 
 func _on_Timer_timeout():
 	animation.play("fadeIn")

@@ -1,8 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Fonts/dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Fonts/josefinSans20.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Scripts/TutorialLabel.gd" type="Script" id=2]
-
 
 [sub_resource type="Animation" id=1]
 resource_name = "fadeIn"
@@ -35,7 +34,6 @@ tracks/0/keys = {
 }
 
 [node name="Label" type="Label"]
-modulate = Color( 1, 1, 1, 0 )
 margin_left = 356.99
 margin_top = 34.5343
 margin_right = 633.99
