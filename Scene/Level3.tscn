@@ -102,9 +102,9 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 [node name="PlayerMirror" parent="." instance=ExtResource( 2 )]
 position = Vector2( 784, 400 )
 
-[node name="Door" type="Node2D" parent="."]
+[node name="Doors" type="Node2D" parent="."]
 
-[node name="Door" parent="Door" instance=ExtResource( 11 )]
+[node name="Door" parent="Doors" instance=ExtResource( 11 )]
 position = Vector2( 704, 208 )
 rotation = 1.5708
 linkCode = 1

@@ -36,7 +36,6 @@ position = Vector2( 96, 128 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 576, 512 )
-nextScene = "res://Scene/Level12.tscn"
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )

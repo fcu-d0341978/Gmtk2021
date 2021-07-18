@@ -2,7 +2,7 @@ extends Node2D
 
 export(int) var linkCode: int = 0
 signal doorOpen
-onready var actionables_container: Node2D = get_parent().get_parent().get_node("Door")
+onready var actionables_container: Node2D = get_parent().get_parent().get_node("Doors")
 
 func _on_Area2D_body_entered(body):
 	if "Player" or "PlayerMirror" in body.name:
