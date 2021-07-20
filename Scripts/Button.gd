@@ -3,17 +3,19 @@ extends Node2D
 export(int) var linkCode: int = 0
 signal doorOpen
 onready var actionables_container: Node2D = get_parent().get_parent().get_node("Doors")
+var normalColor = '#ade8f4'
+var pressedColor = '#c8ebf2'
 
 func _on_Area2D_body_entered(body):
 	if "Player" or "PlayerMirror" in body.name:
 		$AudioStreamPlayer.play()
-		$Area2D/Sprite.modulate = Color(0.8, 0.8, 0.8)
+		$Area2D/Sprite.modulate = Color(pressedColor)
 		emit_signal("doorOpen")
 
 
 func _on_Area2D_body_exited(body):
 	if "Player" or "PlayerMirror" in body.name:
-		$Area2D/Sprite.modulate = Color(1, 1, 1)
+		$Area2D/Sprite.modulate = Color(normalColor)
 
 
 func _ready():
