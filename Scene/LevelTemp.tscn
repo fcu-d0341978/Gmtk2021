@@ -36,6 +36,8 @@ position = Vector2( 192, 416 )
 [node name="TouchControls" parent="." instance=ExtResource( 5 )]
 position = Vector2( 96, 520 )
 
+[node name="SimulButtons" type="Node2D" parent="."]
+
 [node name="SettingsButton" parent="." instance=ExtResource( 6 )]
 margin_left = 960.0
 margin_top = 32.0
