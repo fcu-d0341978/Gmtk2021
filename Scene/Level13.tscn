@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Tiles/Wall.tres" type="TileSet" id=1]
 [ext_resource path="res://Prefabs/PlayerMirror.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Prefabs/Button.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/Door.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/SimulButton.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Prefabs/PopupLabel.tscn" type="PackedScene" id=10]
 
 [node name="13" type="Node2D"]
 
@@ -70,6 +71,14 @@ linkCode = 1
 [node name="SimulButton2" parent="SimulButtons" instance=ExtResource( 9 )]
 position = Vector2( 592, 144 )
 linkCode = 1
+
+[node name="Label" parent="." instance=ExtResource( 10 )]
+margin_left = 304.0
+margin_top = 32.0
+margin_right = 742.0
+margin_bottom = 75.0
+text = "When you meet new people in real life, 
+you also unlocked new characters in your dream world"
 
 [node name="SettingsButton" parent="." instance=ExtResource( 6 )]
 margin_left = 960.0

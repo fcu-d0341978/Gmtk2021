@@ -11,6 +11,6 @@ func change_scene():
 #	var level = SaveState.loadGame()
 	
 #	if level == 0:
-	get_tree().change_scene("res://Scene/Level14.tscn")
+	get_tree().change_scene("res://Scene/Level15.tscn")
 #	else:
 #		get_tree().change_scene("res://Scene/Level" + String(level) + ".tscn")
