@@ -6,12 +6,16 @@
 [ext_resource path="res://Sprites/white.png" type="Texture" id=4]
 [ext_resource path="res://Prefabs/TouchControls.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/SettingsButton.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Prefabs/Spike.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Prefabs/Mechanics/Spike.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Fonts/josefinSans20.tres" type="DynamicFont" id=8]
 [ext_resource path="res://Scripts/TutorialLabel.gd" type="Script" id=9]
-[ext_resource path="res://Prefabs/PopupLabel.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Prefabs/Door.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Prefabs/Button.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Prefabs/Mechanics/PopupLabel.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/Mechanics/Door.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Prefabs/Mechanics/Button.tscn" type="PackedScene" id=12]
+
+
+
+
 
 [sub_resource type="Animation" id=1]
 resource_name = "fadeIn"

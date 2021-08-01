@@ -5,9 +5,11 @@
 [ext_resource path="res://Prefabs/SettingsButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/TouchControls.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Prefabs/Spike.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Prefabs/PopupLabel.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Prefabs/Mechanics/Spike.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/Mechanics/PopupLabel.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/PlayerMirror.tscn" type="PackedScene" id=8]
+
+
 
 [node name="8" type="Node2D"]
 
