@@ -4,6 +4,8 @@ var moveSpeed = 350
 var nextScene = ""
 onready var particlePosition = $ParticlePosition
 var particleScene = preload("res://Prefabs/Particles.tscn")
+export(bool) var isReverse: bool = false
+var direction = 1
 
 func _process(delta):
 	if Input.is_action_pressed("restart"):
@@ -13,6 +15,8 @@ func _ready():
 	nextScene = "res://Scene/Level" + String(int(get_parent().name) + 1) + ".tscn"
 	SignalManager.connect("transitioned", self, "change_scene")
 	SignalManager.connect("DeathTransitioned", self, "reloadScene")
+	if(isReverse && name == "PlayerMirror"):
+		direction = -1
 
 func restartScene():
 	SignalManager.emit_signal("doDeathTransition")
@@ -25,16 +29,16 @@ func _physics_process(delta):
 	var motion = Vector2()
 #
 	if Input.is_action_pressed("up"):
-		motion.y -= 1
+		motion.y -= direction
 
 	if Input.is_action_pressed("down"):
-		motion.y += 1
+		motion.y += direction
 
 	if Input.is_action_pressed("right"):
-		motion.x += 1
+		motion.x += direction
 
 	if Input.is_action_pressed("left"):
-		motion.x -= 1
+		motion.x -= direction
 
 	motion = motion.normalized()
 	motion = move_and_slide(motion * moveSpeed)
