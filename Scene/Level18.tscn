@@ -8,7 +8,6 @@
 [ext_resource path="res://Sprites/white.png" type="Texture" id=6]
 [ext_resource path="res://Tiles/Wall.tres" type="TileSet" id=7]
 
-
 [node name="19" type="Node2D"]
 
 [node name="background" type="Sprite" parent="."]

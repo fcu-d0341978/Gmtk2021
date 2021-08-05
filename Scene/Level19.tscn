@@ -11,7 +11,7 @@
 [ext_resource path="res://Prefabs/Mechanics/SimulButton.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/TouchControls.tscn" type="PackedScene" id=10]
 
-[node name="20" type="Node2D"]
+[node name="19" type="Node2D"]
 
 [node name="background" type="Sprite" parent="."]
 modulate = Color( 0, 0.466667, 0.713726, 1 )
