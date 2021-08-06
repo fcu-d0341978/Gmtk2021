@@ -17,6 +17,7 @@ func _ready():
 	SignalManager.connect("DeathTransitioned", self, "reloadScene")
 	if(isReverse && name == "PlayerMirror"):
 		direction = -1
+		$Sprite.modulate = Color('#6D7CE1')
 
 func restartScene():
 	SignalManager.emit_signal("doDeathTransition")
