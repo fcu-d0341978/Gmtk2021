@@ -11,7 +11,7 @@
 [ext_resource path="res://Prefabs/Mechanics/SimulButton.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/Mechanics/Door.tscn" type="PackedScene" id=10]
 
-[node name="22" type="Node2D"]
+[node name="23" type="Node2D"]
 
 [node name="background" type="Sprite" parent="."]
 modulate = Color( 0, 0.466667, 0.713726, 1 )
@@ -22,17 +22,17 @@ texture = ExtResource( 4 )
 [node name="Buttons" type="Node2D" parent="."]
 
 [node name="Button" parent="Buttons" instance=ExtResource( 8 )]
-position = Vector2( 704, 272 )
+position = Vector2( 704, 224 )
 linkCode = 1
 
 [node name="Button2" parent="Buttons" instance=ExtResource( 8 )]
-position = Vector2( 224, 304 )
+position = Vector2( 320, 384 )
 linkCode = 3
 
 [node name="Spikes" type="Node2D" parent="."]
 
 [node name="Spike" parent="Spikes" instance=ExtResource( 7 )]
-position = Vector2( 320, 384 )
+position = Vector2( 224, 264 )
 
 [node name="Spike2" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 800, 352 )
@@ -42,18 +42,6 @@ position = Vector2( 608, 384 )
 
 [node name="Spike4" parent="Spikes" instance=ExtResource( 7 )]
 position = Vector2( 416, 224 )
-
-[node name="Spike5" parent="Spikes" instance=ExtResource( 7 )]
-position = Vector2( 96, 480 )
-
-[node name="Spike6" parent="Spikes" instance=ExtResource( 7 )]
-position = Vector2( 928, 128 )
-
-[node name="Spike7" parent="Spikes" instance=ExtResource( 7 )]
-position = Vector2( 928, 192 )
-
-[node name="Spike8" parent="Spikes" instance=ExtResource( 7 )]
-position = Vector2( 96, 416 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 112, 240 )
@@ -66,7 +54,6 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 
 [node name="PlayerMirror" parent="." instance=ExtResource( 2 )]
 position = Vector2( 912, 368 )
-isReverse = true
 
 [node name="Doors" type="Node2D" parent="."]
 
@@ -91,11 +78,11 @@ position = Vector2( 96, 520 )
 [node name="SimulButtons" type="Node2D" parent="."]
 
 [node name="SimulButton" parent="SimulButtons" instance=ExtResource( 9 )]
-position = Vector2( 96, 352 )
+position = Vector2( 416, 304 )
 linkCode = 2
 
 [node name="SimulButton2" parent="SimulButtons" instance=ExtResource( 9 )]
-position = Vector2( 928, 256 )
+position = Vector2( 608, 304 )
 linkCode = 2
 
 [node name="SettingsButton" parent="." instance=ExtResource( 6 )]

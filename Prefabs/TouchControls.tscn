@@ -19,6 +19,7 @@ extents = Vector2( 18, 12 )
 extents = Vector2( 18, 12 )
 
 [node name="TouchControls" type="Node2D"]
+modulate = Color( 1, 1, 1, 0.470588 )
 scale = Vector2( 1.5, 1.5 )
 script = ExtResource( 5 )
 

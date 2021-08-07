@@ -8,6 +8,7 @@
 extents = Vector2( 16, 16 )
 
 [node name="SimulButton" type="Node2D"]
+modulate = Color( 0.631373, 0.631373, 0.803922, 1 )
 script = ExtResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="."]
