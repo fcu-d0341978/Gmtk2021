@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Sprites/BasicTheme.tres" type="Theme" id=1]
-[ext_resource path="res://Prefabs/uiButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sound/uiButton.wav" type="AudioStream" id=2]
 [ext_resource path="res://Scripts/Menu.gd" type="Script" id=3]
 [ext_resource path="res://Sprites/white.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/UI/2x/rightPressed.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/UI/2x/right.png" type="Texture" id=6]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource( 3 )
@@ -30,12 +32,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Start" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 464.0
+margin_top = 368.0
+margin_right = 564.0
+margin_bottom = 468.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Button" parent="CanvasLayer" instance=ExtResource( 2 )]
-show_behind_parent = true
-margin_left = 432.0
-margin_top = 472.0
-margin_right = 581.0
-margin_bottom = 556.0
-[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_Button_pressed"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+[connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
