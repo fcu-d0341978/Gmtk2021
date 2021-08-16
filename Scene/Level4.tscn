@@ -10,9 +10,6 @@
 [ext_resource path="res://Prefabs/Mechanics/PopupLabel.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/Mechanics/Button.tscn" type="PackedScene" id=9]
 
-
-
-
 [node name="4" type="Node2D"]
 
 [node name="background" type="Sprite" parent="."]
@@ -73,6 +70,6 @@ for 8 hours straight"
 
 [node name="SettingsButton" parent="." instance=ExtResource( 6 )]
 margin_left = 960.0
-margin_top = 32.0
-margin_right = 992.0
-margin_bottom = 64.0
+margin_top = 16.0
+margin_right = 1010.0
+margin_bottom = 66.0

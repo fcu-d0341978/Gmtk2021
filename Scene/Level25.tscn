@@ -71,6 +71,6 @@ linkCode = 1
 
 [node name="SettingsButton" parent="." instance=ExtResource( 7 )]
 margin_left = 960.0
-margin_top = 32.0
-margin_right = 992.0
-margin_bottom = 64.0
+margin_top = 16.0
+margin_right = 1010.0
+margin_bottom = 66.0

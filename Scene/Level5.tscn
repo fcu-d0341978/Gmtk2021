@@ -13,10 +13,6 @@
 [ext_resource path="res://Prefabs/Mechanics/Door.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Prefabs/Mechanics/Button.tscn" type="PackedScene" id=12]
 
-
-
-
-
 [sub_resource type="Animation" id=1]
 resource_name = "fadeIn"
 tracks/0/type = "value"
@@ -184,9 +180,9 @@ wait_time = 5.0
 
 [node name="SettingsButton" parent="." instance=ExtResource( 6 )]
 margin_left = 960.0
-margin_top = 24.0
-margin_right = 992.0
-margin_bottom = 56.0
+margin_top = 16.0
+margin_right = 1010.0
+margin_bottom = 66.0
 [connection signal="timeout" from="Label/Timer" to="Label" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Label/Timer2" to="Label" method="_on_Timer2_timeout"]
 [connection signal="timeout" from="Label2/Timer" to="Label2" method="_on_Timer_timeout"]

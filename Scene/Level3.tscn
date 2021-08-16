@@ -11,8 +11,6 @@
 [ext_resource path="res://Prefabs/SettingsButton.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/TouchControls.tscn" type="PackedScene" id=10]
 
-
-
 [sub_resource type="Animation" id=1]
 resource_name = "fadeIn"
 tracks/0/type = "value"
@@ -111,8 +109,8 @@ anims/fadeOut = SubResource( 2 )
 
 [node name="SettingsButton" parent="." instance=ExtResource( 9 )]
 margin_left = 960.0
-margin_top = 24.0
-margin_right = 992.0
-margin_bottom = 56.0
+margin_top = 16.0
+margin_right = 1010.0
+margin_bottom = 66.0
 [connection signal="timeout" from="Label/Timer" to="Label" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Label/Timer2" to="Label" method="_on_Timer2_timeout"]

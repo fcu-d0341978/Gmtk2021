@@ -8,7 +8,6 @@
 [ext_resource path="res://Prefabs/SettingsButton.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Prefabs/Mechanics/PopupLabel.tscn" type="PackedScene" id=7]
 
-
 [node name="2" type="Node2D"]
 
 [node name="background" type="Sprite" parent="."]
@@ -48,9 +47,9 @@ text = "When you're a kid, you don't realize
 
 [node name="SettingsButton" parent="." instance=ExtResource( 6 )]
 margin_left = 960.0
-margin_top = 32.0
-margin_right = 992.0
-margin_bottom = 64.0
+margin_top = 16.0
+margin_right = 1010.0
+margin_bottom = 66.0
 
 [node name="SimulButtons" type="Node2D" parent="."]
 

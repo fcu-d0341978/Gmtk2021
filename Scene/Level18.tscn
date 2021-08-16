@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Prefabs/PlayerMirror.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Mechanics/Button.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Prefabs/Mechanics/Spike.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Sprites/white.png" type="Texture" id=6]
 [ext_resource path="res://Tiles/Wall.tres" type="TileSet" id=7]
+[ext_resource path="res://Prefabs/SettingsButton.tscn" type="PackedScene" id=8]
 
 [node name="19" type="Node2D"]
 
@@ -78,3 +79,9 @@ linkCode = 2
 position = Vector2( 512, 400 )
 rotation = 1.5708
 linkCode = 3
+
+[node name="SettingsButton" parent="." instance=ExtResource( 8 )]
+margin_left = 960.0
+margin_top = 16.0
+margin_right = 1010.0
+margin_bottom = 66.0
