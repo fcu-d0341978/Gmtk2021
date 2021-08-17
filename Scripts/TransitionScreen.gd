@@ -3,6 +3,7 @@ extends CanvasLayer
 onready var audioPlayer = $AudioStreamPlayer
 
 func _ready():
+	$AnimationPlayer.playback_speed = 0.5
 	SignalManager.connect("doTransition", self, "transition")
 	SignalManager.connect("doDeathTransition", self, "deathTransition")
 	SignalManager.connect("doLevelSceneTransition", self, "levelSceneTransition")
