@@ -13,12 +13,12 @@ polygon = PoolVector2Array( -16.1104, -15.973, -16.1104, 16.0562, 16.0766, 16.21
 [node name="Spike" type="Node2D"]
 script = ExtResource( 2 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="SpikeArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeArea"]
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="Area2D"]
+[node name="Sprite" type="Sprite" parent="SpikeArea"]
 modulate = Color( 1, 0, 0.431373, 1 )
 texture = ExtResource( 1 )
 
@@ -29,4 +29,3 @@ occluder = SubResource( 2 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
-[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

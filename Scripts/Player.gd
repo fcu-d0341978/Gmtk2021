@@ -4,6 +4,7 @@ var moveSpeed = 350
 var nextScene = ""
 onready var particlePosition = $ParticlePosition
 var particleScene = preload("res://Prefabs/Particles.tscn")
+var redParticleScene = preload("res://Prefabs/RedParticles.tscn")
 export(bool) var isReverse: bool = false
 var direction = 1
 
@@ -48,6 +49,7 @@ func _physics_process(delta):
 
 func _on_Area2D_body_entered(body):
 	if "PlayerMirror" in body.name:
+		print(body.name)
 		if nextScene == "":
 			print("Enter next scene path")
 		else:
@@ -60,6 +62,24 @@ func _on_Area2D_body_entered(body):
 			if SignalManager.unlockedLevels == str2var(get_parent().name):
 				SignalManager.unlockedLevels += 1
 			SaveState.saveGame(int(get_parent().name) + 1)
+			
 
 func change_scene():
 	get_tree().change_scene(nextScene)
+
+
+func _on_Area2D_area_entered(area):
+	print(area.name)
+	if "MovingBlockArea" in area.name:
+		print(area.name)
+		var particle = redParticleScene.instance()
+		add_child(particle)
+		particle.set_position(particlePosition.get_position())
+		SignalManager.emit_signal("doDeathTransition")
+	
+	if "SpikeArea" in area.name:
+		print(area.name)
+		var particle = redParticleScene.instance()
+		add_child(particle)
+		particle.set_position(particlePosition.get_position())
+		SignalManager.emit_signal("doDeathTransition")

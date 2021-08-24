@@ -8,9 +8,7 @@ export var idle_duration = 0.5
 
 onready var block = $KinematicBody2D
 onready var tween = $Tween
-onready var particlePosition = $KinematicBody2D/ParticlePosition
 
-var particleScene = preload("res://Prefabs/RedParticles.tscn")
 
 func _ready():
 	move_to = move_to * BLOCK_SIZE
@@ -23,9 +21,6 @@ func init_tween():
 	tween.start()
 
 
-func _on_Area2D_area_entered(area):
-	if "Player" or "PlayerMirror" in area.name:
-		var particle = particleScene.instance()
-		add_child(particle)
-		particle.set_position(particlePosition.get_position())
-		SignalManager.emit_signal("doDeathTransition")
+#func _on_Area2D_area_entered(area):
+#	if "Player" or "PlayerMirror" in area.name:
+#		SignalManager.emit_signal("doDeathTransition")
