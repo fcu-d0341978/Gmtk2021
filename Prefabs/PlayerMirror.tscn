@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/PlayerMirror.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/white.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/light.png" type="Texture" id=3]
 
@@ -37,3 +37,4 @@ shadow_enabled = true
 __meta__ = {
 "_editor_description_": ""
 }
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
