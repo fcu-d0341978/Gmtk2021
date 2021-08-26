@@ -99,16 +99,13 @@ move_to = Vector2( -1.5, 0 )
 position = Vector2( 336, 480 )
 rotation = 1.5708
 move_to = Vector2( -1.5, 0 )
-idle_duration = 0.5
 
 [node name="MovingBlock8" parent="MovingBlocks" instance=ExtResource( 7 )]
 position = Vector2( 496, 384 )
 rotation = 1.5708
 move_to = Vector2( 1.5, 0 )
-idle_duration = 0.5
 
 [node name="MovingBlock9" parent="MovingBlocks" instance=ExtResource( 7 )]
 position = Vector2( 656, 480 )
 rotation = 1.5708
 move_to = Vector2( -1.5, 0 )
-idle_duration = 0.5
