@@ -66,20 +66,20 @@ func _on_Area2D_body_entered(body):
 
 func change_scene():
 	get_tree().change_scene(nextScene)
+	
+func death():
+	var particle = redParticleScene.instance()
+	add_child(particle)
+	particle.set_position(particlePosition.get_position())
+	SignalManager.emit_signal("doDeathTransition")
 
 
 func _on_Area2D_area_entered(area):
-	print(area.name)
 	if "MovingBlockArea" in area.name:
-		print(area.name)
-		var particle = redParticleScene.instance()
-		add_child(particle)
-		particle.set_position(particlePosition.get_position())
-		SignalManager.emit_signal("doDeathTransition")
+		death()
 	
 	if "SpikeArea" in area.name:
-		print(area.name)
-		var particle = redParticleScene.instance()
-		add_child(particle)
-		particle.set_position(particlePosition.get_position())
-		SignalManager.emit_signal("doDeathTransition")
+		death()
+	
+	if "MovingSpikeArea" in area.name:
+		death()
